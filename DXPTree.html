@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <H1>DXP Suite Components & User Types</H1>
+<!-- Styles -->
+<style>
+    body { background-color: #30303d; color: #00c9e8; }
+    #chartdiv {
+      width: 100%;
+      max-width: 100%;
+    height:800px;
+    }
+    </style>
+    
+    <!-- Resources -->
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/plugins/forceDirected.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/dark.js"></script>
+    
+    <!-- Chart code -->
+    <script>
+    am4core.ready(function() {
+    
+    // Themes begin
+    am4core.useTheme(am4themes_dark);
+    // Themes end
+    
+    
+    
+    var chart = am4core.create("chartdiv", am4plugins_forceDirected.ForceDirectedTree);
+    chart.legend = new am4charts.Legend();
+    
+    var networkSeries = chart.series.push(new am4plugins_forceDirected.ForceDirectedSeries())
+    
+    networkSeries.data = [{
+              name: 'Journey Creator', value: 10,
+      children: [
+      //The seven types of user begins    
+      
+      {
+        name: 'Honeycomb', off: true, linkWith: ['Digital Coach'], 
+        children: [   {
+                name: 'Solutions Engineering/SRE', value: 1
+            }, 
+            {
+                name: 'Tech Support', value: 1
+            }, 
+            {
+                name: 'Resellers/Partners', value: 1
+            }, 
+            {
+                name: 'Sales', value: 1
+            }, 
+            {
+                name: 'B2B', value: 1
+            }, 
+            {
+                name: 'B2C', value: 1
+            }, 
+            {
+                name: 'Call Center', value: 1
+            },  
+            ]
+      }, 
+      {
+        name: 'Digital Coach', off: true, children: 
+            [{name: 'Populator', value: 1}, {
+                name: 'Solutions Engineering/SRE', value: 1
+            }, 
+            {
+                name: 'Tech Support', value: 1
+            }, 
+            {
+                name: 'Resellers/Partners', value: 1
+            }, 
+            {
+                name: 'Sales', value: 1
+            }, 
+            {
+                name: 'B2B', value: 1
+            }, 
+            {
+                name: 'B2C', value: 1
+            }, 
+            {
+                name: 'Call Center', value: 1
+            },  
+            ]
+      }, 
+      {
+        name: 'Synchronoss Insights Platform(SIP)', off: true, linkWith: ['Digital Coach'], children: [   {
+                name: 'Solutions Engineering/SRE', value: 1
+            }, 
+            {
+                name: 'Tech Support', value: 1
+            }, 
+            {
+                name: 'Resellers/Partners', value: 1
+            }  
+            ]
+      },
+      {
+        name: 'Populator', off: true, linkWith: ['Digital Coach'], children: [   {
+                name: 'Solutions Engineering/SRE', value: 1
+            }, 
+            {
+                name: 'Tech Support', value: 1
+            }, 
+            {
+                name: 'Resellers/Partners', value: 1
+            }, 
+            {
+                name: 'Sales', value: 1
+            }, 
+             
+            ]
+      },  
+      {
+        name: 'Journey Simulator', off: true, children: [   {
+                name: 'Solutions Engineering/SRE', value: 1
+            }, 
+            {
+                name: 'Tech Support', value: 1
+            }, 
+            {
+                name: 'Resellers/Partners', value: 1
+            }, 
+            {
+                name: 'Sales', value: 1
+            }, 
+              
+            ]
+      }, 
+      {
+        name: 'Penumbra', off: true, children: [   {
+                name: 'Solutions Engineering/SRE', value: 1
+            }, 
+            {
+                name: 'Tech Support', value: 1
+            }, 
+             
+            ]
+      }, 
+      {
+        name: 'Lumen', off: true, children: [   {
+                name: 'Solutions Engineering/SRE', value: 1
+            }, 
+            {
+                name: 'Tech Support', value: 1
+            }, 
+            {
+                name: 'Resellers/Partners', value: 1
+            }, 
+            {
+                name: 'Sales', value: 1
+            }, 
+            {
+                name: 'B2B', value: 1
+            }, 
+            {
+                name: 'B2C', value: 1
+            }, 
+              
+            ]
+      }, 
+      {
+        name: 'Journey Advisor', off: true, children: [   
+            {
+                name: 'Tech Support', value: 1
+            }, 
+            {
+                name: 'Resellers/Partners', value: 1
+            }, 
+            {
+                name: 'Sales', value: 1
+            }, 
+            {
+                name: 'B2B', value: 1
+            }, 
+            {
+                name: 'B2C', value: 1
+            }, 
+            ]
+      }, 
+      {
+        name: 'Self-Service', off: true, children: [   
+            
+            {
+                name: 'B2B', value: 1
+            }, 
+            {
+                name: 'B2C', value: 1
+            },
+            {
+                name: 'Call Center', value: 1
+            } 
+            ]
+      }, 
+      {
+        name: 'Ops Toolkit', off: true, children: [   {
+                name: 'Solutions Engineering/SRE', value: 1
+            }, 
+            {
+                name: 'Tech Support', value: 1
+            }, 
+            {
+                name: 'B2B', value: 1
+            }, 
+            {
+                name: 'B2C', value: 1
+            }, 
+            {
+                name: 'Call Center', value: 1
+            }  
+            ]
+      }
+       
+      
+      //Nested module begins
+      ]
+    }];
+    
+
+    //The seven types of user begins    
+    // {
+    //     name: 'Solutions Engineering/SRE', value: 1
+    //   }, 
+    //   {
+    //     name: 'Tech Support', value: 1
+    //   }, 
+    //   {
+    //     name: 'Resellers/Partners', value: 1
+    //   }, 
+    //   {
+    //     name: 'Sales', value: 1
+    //   }, 
+    //   {
+    //     name: 'B2B', value: 1
+    //   }, 
+    //   {
+    //     name: 'B2C', value: 1
+    //   }, 
+    //   {
+    //     name: 'Call Center', value: 1
+    //   }, 
+    //   The seven types of users ends
+    
+    //Stretching out links
+    networkSeries.links.template.distance = 2;
+//Collapsing components by default
+networkSeries.dataFields.collapsed = "off";
+
+    networkSeries.dataFields.linkWith = "linkWith";
+    networkSeries.dataFields.name = "name";
+    networkSeries.dataFields.id = "name";
+    networkSeries.dataFields.value = "value";
+    networkSeries.dataFields.children = "children";
+    
+    networkSeries.nodes.template.tooltipText = "{name}";
+    networkSeries.nodes.template.fillOpacity = 1;
+    
+    networkSeries.nodes.template.label.text = "{name}"
+    networkSeries.fontSize = 12;
+    networkSeries.maxLevels = 2;
+    networkSeries.maxRadius = am4core.percent(6);
+    networkSeries.manyBodyStrength = -16;
+    networkSeries.nodes.template.label.hideOversized = true;
+    networkSeries.nodes.template.label.truncate = true;
+    
+    }); // end am4core.ready()
+    </script>
+    
+    <!-- HTML -->
+    <div id="chartdiv"></div>
+
+
+</body>
+</html>
